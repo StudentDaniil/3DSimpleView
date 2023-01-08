@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cgvsu.GuiController">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="File">
+         <MenuItem mnemonicParsing="false" onAction="#onSaveModelMenuItemClick" text="Save Model">
+            <accelerator>
+               <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+            </accelerator>
+         </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#onOpenModelMenuItemClick" text="Load Model">
+            <accelerator>
+                <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+            </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Camera Options">
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraForward" text="Forward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="UP" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraBackward" text="Backward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="DOWN" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraLeft" text="Left">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="LEFT" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraRight" text="Right">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="RIGHT" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraUp" text="Up">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="W" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCameraDown" text="Down">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+        </Menu>
+      <Menu mnemonicParsing="false" text="Change Format Polygon">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#triangulationButton" text="Triangulation" />
+            <MenuItem mnemonicParsing="false" onAction="#classicButton" text="Classic" />
+        </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Several Models">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#deleteOneButton" text="Delete 1 model" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteTwoButton" text="Delete 2 model" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteThreeButton" text="Delete 3 model" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteFourButton" text="Delete 4 model" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteFiveButton" text="Delete 5 model" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteAll" text="Clear">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="DELETE" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+        </items>
+      </Menu>
+    </MenuBar>
+
+    <Canvas fx:id="canvas" height="741.0" layoutY="159.0" width="1600" AnchorPane.topAnchor="159.0" />
+</AnchorPane>
